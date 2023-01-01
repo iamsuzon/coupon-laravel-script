@@ -1,0 +1,4 @@
+<div class="comment-area-full-wrapper">
+    <?php echo $__env->make('blog::frontend.blog.blog-single-variant.partials.details_comments_01', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('blog::frontend.blog.blog-single-variant.partials.details_write_comments_01', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+</div><?php /**PATH /Users/xgenious/Desktop/xgenious/localhost/coupon/@core/Modules/Blog/Resources/views/frontend/blog/blog-single-variant/partials/details_comment_area_01.blade.php ENDPATH**/ ?>

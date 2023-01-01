@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("../fonts/flaticon.ttf?c886f24b8e866851808e41e5312a5951") format("truetype"),
+        url("../fonts/flaticon.woff?c886f24b8e866851808e41e5312a5951") format("woff"),
+        url("../fonts/flaticon.woff2?c886f24b8e866851808e41e5312a5951") format("woff2"),
+        url("../fonts/flaticon.eot?c886f24b8e866851808e41e5312a5951#iefix") format("embedded-opentype"),
+        url("../fonts/flaticon.svg?c886f24b8e866851808e41e5312a5951#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before,
+i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-book:before {
+    content: "\f101";
+}
+
+.flaticon-pencil:before {
+    content: "\f102";
+}
+
+.flaticon-game-controller:before {
+    content: "\f103";
+}
+
+.flaticon-video-game:before {
+    content: "\f104";
+}
+
+.flaticon-web-programming:before {
+    content: "\f105";
+}
+
+.flaticon-airplane:before {
+    content: "\f106";
+}
+
+.flaticon-shopping-bag:before {
+    content: "\f107";
+}
+
+.flaticon-passport:before {
+    content: "\f108";
+}
+
+.flaticon-ticket:before {
+    content: "\f109";
+}
+
+.flaticon-cutlery:before {
+    content: "\f10a";
+}
+
+.flaticon-open-book:before {
+    content: "\f10b";
+}
+
+.flaticon-left-quote:before {
+    content: "\f10c";
+}

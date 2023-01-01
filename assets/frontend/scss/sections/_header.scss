@@ -1,0 +1,280 @@
+/*--------------------------------------------------------------
+	## Header
+--------------------------------------------------------------*/
+
+.header-area-wrapper {
+  .header-area {
+
+    /*---- index-01 ----*/
+    &.index-01 {
+      position: relative;
+      padding-top: 115px;
+      overflow: hidden;
+
+      .shape-bg-01 {
+        position: absolute;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        right: -5px;
+        bottom: 100px;
+      }
+
+      .shape-bg-02 {
+        position: absolute;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        left: 0;
+        top: 200px;
+      }
+
+      .shape-bg-03 {
+        position: absolute;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        right: 0;
+        top: 200%;
+      }
+
+      .header-content {
+        min-height: 830px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .content {
+          max-width: 600px;
+
+          .text-content {
+            padding-right: 50px;
+            padding-top: 50px;
+          }
+
+          .main-title {
+            font-family: var(--heading-font);
+            font-size: 80px;
+            line-height: 100px;
+            font-weight: 700;
+            color: var(--heading-color);
+          }
+
+          .info {
+            font-family: var(--heading-font);
+            color: var(--main-color-two);
+            margin-top: 35px;
+            font-weight: 600;
+          }
+
+          .search {
+            margin-top: 35px;
+          }
+        }
+
+        .img-box-01 {
+          position: absolute;
+          right: 0px;
+          bottom: 0;
+          animation-name: slowupone;
+          animation-duration: 3s;
+          animation-delay: 1s;
+          animation-iteration-count: 1;
+
+          @keyframes slowupone {
+            from {
+              bottom: -200px;
+              opacity: 0.1;
+            }
+
+            to {
+              bottom: 0px;
+              opacity: 1;
+            }
+          }
+        }
+
+        .img-box-02 {
+          position: absolute;
+          right: 550px;
+          bottom: 490px;
+          animation-name: slowdownone;
+          animation-duration: 3s;
+          animation-delay: 1s;
+          animation-iteration-count: 1;
+
+          @keyframes slowdownone {
+            from {
+              bottom: 550px;
+              opacity: 0.1;
+            }
+
+            to {
+              bottom: 490px;
+              opacity: 1;
+            }
+          }
+        }
+
+        .img-box-03 {
+          position: absolute;
+          right: -136px;
+          bottom: 425px;
+          animation-name: slowdown;
+          animation-duration: 3s;
+          animation-delay: 1s;
+          animation-iteration-count: 1;
+
+          @keyframes slowdown {
+            from {
+              bottom: 500px;
+              opacity: 0;
+            }
+
+            to {
+              bottom: 425px;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    /*---- index-02 ----*/
+    &.index-02 {
+      position: relative;
+      overflow: hidden;
+
+      .custom-container-01 {
+        border-radius: 15px;
+        background-color: #FDF5EF;
+      }
+
+      &.shape-bg-01 {
+        background-position: right top;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .header-content {
+        min-height: 750px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .content {
+          max-width: 600px;
+
+          .main-title {
+            font-family: var(--heading-font);
+            font-size: 80px;
+            line-height: 100px;
+            font-weight: 700;
+            color: var(--heading-color);
+          }
+
+          .info {
+            font-family: var(--heading-font);
+            color: var(--main-color-two);
+            margin-top: 35px;
+            font-weight: 600;
+          }
+
+          .search {
+            margin-top: 35px;
+          }
+        }
+
+        .img-box {
+          position: absolute;
+          right: 0px;
+          bottom: 0;
+          animation-name: slowupone;
+          animation-duration: 2s;
+          animation-delay: 1s;
+          animation-iteration-count: 1;
+
+          @keyframes slowupone {
+            from {
+              bottom: -300px;
+              opacity: 0.1;
+            }
+
+            to {
+              bottom: 0px;
+              opacity: 1;
+            }
+          }
+
+          img {
+            max-width: 720px;
+          }
+        }
+      }
+    }
+
+    /*---- index-03 ----*/
+    &.index-03 {
+      position: relative;
+
+      &.bg-01 {
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        &::before {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: #000;
+          opacity: 0.6;
+        }
+      }
+
+      .container {
+
+        .header-content {
+          min-height: 800px;
+          max-width: 780px;
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+
+          .content {
+            color: #fff;
+            padding-top: 90px;
+
+            .main-title {
+              font-family: var(--heading-font);
+              font-size: 80px;
+              line-height: 100px;
+              font-weight: 700;
+              color: #fff;
+            }
+
+            .info {
+              font-family: var(--heading-font);
+              color: rgba(255, 255, 255, 0.693);
+              margin-top: 35px;
+              font-weight: 600;
+            }
+
+            .search {
+              margin-top: 35px;
+            }
+          }
+        }
+      }
+    }
+
+    .color-02 {
+      color: var(--main-color-two);
+    }
+  }
+}

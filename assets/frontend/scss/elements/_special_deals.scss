@@ -1,0 +1,102 @@
+/*--------------------------------------------------------------
+	## Special Details
+--------------------------------------------------------------*/
+.single-special-item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+
+    align-items: center;
+
+    .left-content {
+        display: flex;
+        padding: 10px;
+        border-right: 1px dashed #ddd;
+        position: relative;
+        align-items: center;
+
+        .content {
+            .catg {
+                display: inline-block;
+                background-color: #FFF2EF;
+                text-transform: capitalize;
+                color: var(--main-color-three);
+                padding: 1px 20px 2px;
+            }
+
+            .title {
+                font-size: 18px;
+                line-height: 26px;
+                font-weight: 600;
+                color: var(--heading-color);
+                margin: 9px 0 4px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1; 
+                        line-clamp: 1; 
+                -webkit-box-orient: vertical;
+            }
+
+            .used {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 24px;
+
+                .color-text {
+                    color: var(--main-color-three);
+                }
+            }
+        }
+
+        .round-01,
+        .round-02 {
+            position: absolute;
+            width: 21px;
+            height: 21px;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+
+        .round-01 {
+            right: -11px;
+            top: -11px;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 23px;
+                height: 15px;
+                background-color: #fff;
+                right: -2px;
+                top: -6px;
+                z-index: 2;
+            }
+        }
+
+        .round-02 {
+            right: -11px;
+            bottom: -11px;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 23px;
+                height: 15px;
+                background-color: #fff;
+                right: -2px;
+                bottom: -6px;
+                z-index: 2;
+            }
+        }
+    }
+
+    .right-content {
+        padding: 0 22px 0 15px;
+
+        .btn-wrapper {
+            .btn-default {}
+        }
+    }
+}

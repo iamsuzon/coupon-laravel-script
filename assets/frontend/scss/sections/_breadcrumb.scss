@@ -1,0 +1,86 @@
+/*---------------------
+    ## Breadcumb 
+----------------------*/
+.breadcrumb-full {
+    min-height: 330px;
+}
+.breadcrumb-area {
+    
+    margin-top: 110px;
+    top: 0;
+    width: 100%;
+
+    .custom-container-01 {
+        background-color: #FFF7F3;
+        border-radius: 10px;
+    }
+
+    .breadcrumb-inner {
+        padding-top: 65px;
+        padding-bottom: 65px;
+        .content {
+            min-height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .title {
+                font-size: 36px;
+                line-height: 50px;
+                font-weight: 700;
+                text-transform: capitalize;
+                font-family: var(--heading-font);
+                color: #000;
+            }
+
+            .page-list {
+                margin: 0;
+                padding: 0;
+                margin-top: 10px;
+
+                .list-item {
+                    color: #666666;
+                    display: inline-block;
+                    position: relative;
+                    padding-left: 25px;
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 400;
+                    text-transform: capitalize;
+
+                    &:first-child {
+                        padding-left: 0;
+                        margin-right: 10px;
+
+                        &:after {
+                            display: none;
+                        }
+                    }
+
+                    &:last-child {
+                        color: #333333;
+                    }
+
+                    &:after {
+                        position: absolute;
+                        left: 2px;
+                        top: 0px;
+                        content: "|";
+                        color: #666666;
+                        line-height: 20px;
+                        font-size: 15px;
+                    }
+
+                    a {
+                        transition: all linear 0.2s;
+
+                        &:hover {
+                            color: var(--main-color-one);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

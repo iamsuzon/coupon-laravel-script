@@ -1,0 +1,120 @@
+/*----------------------------
+    Toolbox
+----------------------------*/
+
+.toolbox-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+
+    .toolbox-right {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .toolbox-item {
+
+        &.toolbox-layout {
+
+            .layout-list {
+
+                .layout-item {
+                    display: inline-block;
+                    margin-left: 20px;
+
+                    .grid-layout,
+                    .list-layout {
+                        display: inline-block;
+                        font-size: 25px;
+                        color: #999999;
+
+                        &.current {
+                            color: $white;
+                            background-color: var(--main-color-one);
+                            padding: 0px 7px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.toolbox-show,
+        &.toolbox-sort {
+            position: relative;
+            z-index: 0;
+
+            select {
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: capitalize;
+                color: var(--heading-color);
+                cursor: pointer;
+                background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='charcoal'><polygon points='0,0 10,0 5,5'/></svg>");
+                background-repeat: no-repeat;
+                background-position-y: 58%;
+                background-position-x: 95%;
+                appearance: none;
+                transition: all linear 0.2s;
+                border: 1px solid #dddddd;
+                border-radius: 5px;
+            }
+
+            .select-box {
+                padding: 3px 25px 4px 8px;
+                appearance: none;
+            }
+        }
+
+        &.toolbox-tags {
+            display: flex;
+
+            .tag {
+                display: flex;
+                align-items: center;
+                background-color: #FFF7F3;
+                padding: 2px 7px 3px 14px;
+                border-radius: 4px;
+                color: #666;
+                margin: 0 5px;
+                transition: all linear 0.2s;
+
+                &:hover {
+                    background-color: var(--main-color-three);
+                    color: #fff;
+                }
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                .close-btn {
+                    .icon {
+                        color: #fff;
+                        font-size: 15px;
+                        margin-left: 5px;
+                        transition: all linear 0.2s;
+                    }
+
+                    &:hover {
+                        .icon {
+                            background-color: var(--main-color-two);
+                        }
+                    }
+                }
+            }
+        }
+
+        .showing {
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: initial;
+            color: var(--heading-color);
+            padding: 6px 0px 7px;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@extends('frontend.frontend-page-master')
+
+@section('custom-page-title')
+    {!! __('All Blogs') !!}
+@endsection
+
+@section('page-title')
+    @php $page_slug = get_blog_slug_by_page_id(get_static_option('blog_page')) @endphp
+    <li class="list-item"><a href="#">  {!!App\Page::where('id',get_static_option('blog_page'))->first()->getTranslation('title',$user_select_lang_slug) !!}</a></li>
+@endsection
+
+@section('site-title')
+    {!! App\Page::where('id',get_static_option('blog_page'))->first()->getTranslation('title',$user_select_lang_slug) !!}
+@endsection
+
+@section('page-meta-data')
+    {!! render_site_meta() !!}
+    {!! render_site_title(App\Page::where('id',get_static_option('blog_page'))->first()->getTranslation('title',$user_select_lang_slug)) !!}
+@endsection
+
+
+@section('content')
+    @if($page_post->page_builder_status === 'on')
+        @include('frontend.partials.pages-portion.dynamic-page-builder-part',['page_post' => $page_post])
+    @else
+        <div class="blog-grid-area-wrapper food-details" data-padding-top="100" data-padding-bottom="100">
+        <div class="container">
+            <div class="row three-column">
+                @foreach($all_blogs as $blog)
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                        <div class="blog-grid style-01">
+                            <div class="img-box">
+                                {!! render_image_markup_by_attachment_id($blog->image, null, 'grid', false) !!}
+                            </div>
+                            <div class="content">
+                                <h4 class="title">
+                                    <a href="{{route('frontend.blog.single', $blog->slug)}}">{{$blog->title}}</a>
+                                </h4>
+                                <div class="post-meta">
+                                    <ul class="post-meta-list">
+                                        <li class="post-meta-item">
+                                            <a href="{{route('frontend.blog.category.single', $blog->category_id)}}">
+                                                <span class="text">{{optional($blog->category)->title}}</span>
+                                            </a>
+                                        </li>
+                                        <li class="post-meta-item date">
+                                            <span class="text">{{$blog->created_at->format('d F Y')}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+            <div class="row">
+                <!-- pagination area start -->
+                <div class="col-lg-12">
+                    <div class="pagination" data-padding-top="50">
+                        <ul class="pagination-list">
+                            {{$all_blogs->links()}}
+                        </ul>
+                    </div>
+                </div>
+                <!-- pagination area end -->
+            </div>
+        </div>
+    </div>
+    @endif
+@endsection

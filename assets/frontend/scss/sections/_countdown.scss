@@ -1,0 +1,38 @@
+/*---------------------------------------
+    ## Countdown area
+---------------------------------------*/
+.counter-area-wrapper {
+   & > .container {
+        max-width: 1620px;
+        background-color: #E9F6F6;
+        border-radius: 12px;
+        padding: 90px 0;
+    }
+
+    &.bg-ex {
+       & > .container {
+            background-color: #FFF7F3;
+        }
+    }
+}
+
+.single-counter-box {
+    text-align: center;
+    overflow-y: hidden;
+
+    .counter {
+        font-size: 60px;
+        line-height: 50px;
+        font-weight: 600;
+        color: #1D252C;
+    }
+
+    .title {
+        margin-top: 15px;
+        font-size: 24px;
+        line-height: 34px;
+        font-weight: 600;
+        color: #828282;
+        text-transform: capitalize;
+    }
+}

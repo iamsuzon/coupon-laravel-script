@@ -1,0 +1,199 @@
+/*---------------------------------------
+    ## Form
+---------------------------------------*/
+// search
+.search {
+    &.combained {
+
+        form {
+            .form-group {
+                display: flex;
+                position: relative;
+
+                .ex-icon {
+                    position: absolute;
+                    top: 34%;
+                    left: 25px;
+                    transform: rotate(270deg) translateY(-50%);
+                    font-size: 20px;
+                    color: #4F4F4F;
+                }
+
+                input {
+                    font-size: 18px;
+                    height: 55px;
+                    flex: 1;
+                    border-radius: 0;
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                    border-color: #fff;
+                    background-color: #fff;
+
+                    &::placeholder {
+                        color: #808080;
+                    }
+
+                    &.ex-padding {
+                        padding-left: 45px;
+                    }
+                  
+                }
+
+                .search-btn {
+                    font-family: var(--heading-font);
+                    font-size: 18px;
+                    font-weight: 600;
+                    height: 55px;
+                    border: 1px solid var(--main-color-one);
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    background-color: var(--main-color-one);
+                    color: #fff;
+                    padding-left: 45px;
+                    padding-right: 45px;
+                    transition: all linear 0.2s;
+
+                    &:hover {
+                        background-color: #fff;
+                        border-color: var(--main-color-one);
+                        color: var(--main-color-one);
+                    }
+
+                    &.main-color-two {
+                        background-color: var(--main-color-two);
+                        border-color: var(--main-color-two);
+
+                        &:hover {
+                            color: var(--main-color-two);
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.v-02 {
+            form {
+                .form-group {
+                    display: flex;
+                    padding: 10px;
+                    background-color: #fff;
+                    border-radius: 50px;
+
+                    input {
+                        font-size: 18px;
+                        height: 55px;
+                        flex: 1;
+                        border-radius: 0;
+                        border-top-left-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                        border-color: #fff;
+                        background-color: #fff;
+
+                        &::placeholder {
+                            color: #BDBDBD;
+                        }
+                    }
+
+                    .search-btn {
+                        font-family: var(--heading-font);
+                        font-size: 18px;
+                        font-weight: 600;
+                        height: 55px;
+                        border: 1px solid var(--main-color-three);
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                        background-color: var(--main-color-three);
+                        color: #fff;
+                        padding-left: 25px;
+                        padding-right: 25px;
+                        transition: all linear 0.2s;
+                        border-radius: 50px;
+
+                        &:hover {
+                            background-color: #fff;
+                            border-color: var(--main-color-three);
+                            color: var(--main-color-three);
+                        }
+
+                        &.main-color-two {
+                            background-color: var(--main-color-two);
+                            border-color: var(--main-color-two);
+
+                            &:hover {
+                                color: var(--main-color-two);
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.ex {
+                position: relative;
+                z-index: 2;
+
+                .form-group {
+                    padding: 10px;
+
+                    input {
+                        position: relative;
+                        width: 33%;
+                        border-right: 1px solid #ddd;
+                        height: 50px;
+
+                        &::placeholder {
+                            color: #808080;
+                        }
+                    }
+
+                    select {
+                        width: 33%;
+                        border: none;
+                        color: #808080;
+                        padding: 0 12px;
+                    }
+
+                    button {
+                        width: 25%;
+                        margin-left: 20px;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+
+        &.v-03 {
+            .form-group {
+                background-color: #fff;
+                border-radius: 25px;
+
+                input {
+                    border-top-left-radius: 25px;
+                    border-bottom-left-radius: 25px;
+                }
+                .search-btn {
+                    border-radius: 25px;
+                }
+            }
+        }
+
+        &.main-color-two {
+            .form-group {
+                i {
+                    color: var(--main-color-two);
+                }
+    
+                .search-btn {
+                    background-color: var(--main-color-two);
+                    border-color: var(--main-color-two);
+
+                    &:hover {
+                        border-color: var(--main-color-two);
+                        color: var(--main-color-two);
+                    }
+                }
+            }
+        }
+    }
+}

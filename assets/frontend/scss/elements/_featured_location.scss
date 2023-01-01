@@ -1,0 +1,44 @@
+/*---------------------------------------
+    ## Featured location
+---------------------------------------*/
+.single-featured-location {
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+
+    .img-box {
+        .image {
+            border-radius: 6px;
+            max-width: 90px;
+        }
+    }
+  
+    .content {
+      padding-left: 15px;
+  
+      .title {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 600;
+        color: var(--heading-color);
+        margin-bottom: 4px;
+      }
+    }
+
+    &.v-02 {
+      background-color: #F9F9F9;
+      padding: 8px;
+    }
+
+    &.v-03 {
+      border: 1px solid #d6d6d6;
+      padding: 8px;
+      border-radius: 0px;
+
+      .img-box {
+        img {
+          border-radius: 0px;
+        }
+      }
+    }    
+  }
